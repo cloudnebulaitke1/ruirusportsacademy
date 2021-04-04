@@ -1,0 +1,52 @@
+<?php
+$connection = mysqli_connect("localhost", "root", "", "db_form"); // create datbase connection
+//$db = mysqli_select_db("db_form", $connection); // Selecting Database
+//Fetching Values from URL
+$fname=$_POST['fname'];
+$lname=$_POST['lname'];
+$email=$_POST['email'];
+$phone=$_POST['phone'];
+//Insert query
+$query = mysqli_query($connection, "insert into form_data(firstname, lastname, email, phone) values ('$fname', '$lname', '$email','$phone')");
+echo "Form Submitted Succesfully";
+mysqli_close($connection); // Connection Closed
+?>
+
+
+
+
+
+js 
+
+$(document).ready(function(){
+$("#submit").click(function(){
+//Get all fields value using jQury
+var fname = $("#fname").val();
+var lname = $("#lname").val();
+var email = $("#email").val();
+var phone = $("#phone").val();
+
+//create a datastring
+var dataString = 'fname='+ fname + '&lname='+ lname + '&email='+ email + '&phone='+ phone;
+
+// validation for enter all fields in HTML form
+if(fname==''||lname==''||email==''||phone=='')
+{
+alert("Please Fill All Fields");
+}
+else
+{
+// AJAX Code To Submit Form.
+$.ajax({
+type: "POST",
+url: "formsubmit.php",
+data: dataString,
+cache: false,
+success: function(result){
+alert(result);
+}
+});
+}
+return false;
+});
+});

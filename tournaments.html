@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<title>REGISTRATION FORM</title>
+<title>TOURNAMENTS</title>
 <link rel="shortcut icon" type="image/png" href="./img/ic-launcher-web.png"/>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -18,8 +18,8 @@
           COACHING
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="./coaching.html">Coaching schedule register</a>
-          <a class="dropdown-item" href="./coaching-attendance.html">Coaching attendance</a>
+          <a class="dropdown-item" href="./coach.html">Coaching schedule register</a>
+          <a class="dropdown-item" href="#">Coaching attendance</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Reports</a>
         </div>
@@ -42,7 +42,7 @@
         <a class="nav-link" href="./tournaments.html">TOURNAMENTS</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link " href="./dashboard/v2">VIEW REPORTS</a>
+        <a class="nav-link " href="#">VIEW REPORTS</a>
       </li>
     
     <input type="button" id="btn" class="btn btn-primary " value="REGISTER / LOGIN" onclick="window.location.href='register.html'">
@@ -50,7 +50,7 @@
   
  
   <hr>
-  <div class="alert alert-success">Success! you are registered</div>
+  <div class="alert alert-success">WELCOME! VIEW UPCOMING TOURNAMENTS</div>
    
   <!--preloader-->
   
@@ -71,10 +71,10 @@
 }
 .load hr{border:0;margin:0;width:40%;height:40%;position:absolute;border-radius:50%;animation:spin 2s ease infinite}
 
-.load :first-child{background:#FFCB04;animation-delay:-1.5s}
-.load :nth-child(2){background:#121552;animation-delay:-1s}
-.load :nth-child(3){background:#8CD7F7;animation-delay:-0.5s}
-.load :last-child{background:#FFF}
+.load :first-child{background:#19A68C;animation-delay:-1.5s}
+.load :nth-child(2){background:#F63D3A;animation-delay:-1s}
+.load :nth-child(3){background:#FDA543;animation-delay:-0.5s}
+.load :last-child{background:#193B48}
 
 @keyframes spin{
   0%,100%{transform:translate(0)}
@@ -91,41 +91,75 @@
 </style>
   
   <!--preloader-->
- <body>
+ 
 <div id="login-box">
   <div class="left">
-    <form method="POST" action="register.php">
+    <h1>Tournaments</h1>
+    
+
+
+<h2 style="color:#fff;">Up Coming Tournaments Table</h2>
+
+<table style="width:100%" class="table table-striped table-dark">
+  <tr>
+    <th class="thead-dark">TIME</th>
+    <th>DATE</th> 
+    <th>LOCATION</th>
+     <th>TEAM1<TH>
+<th>VS</th>
+ <th>TEAM2</th>
+  </tr>
+  <tr>
+<td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+<td></td>
+<td></td>
+<td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+  </tr>
+</table>
+<input type="button" value="print"class="btn btn-primary" onclick="print();">
+</body>
+</html>
+
+ 
     
     
-    <input type="text" name="username" placeholder="Username"  id="username"/>
-    <input type="text" name="email" placeholder="E-mail" id="email"/>
-    <input type="password" name="password_1" placeholder="Password"  id="password_1"/>
-    <input type="password" name="password_2" placeholder="Re enter your password"  id="password_2"/>
-    <input type="text" name="fname" placeholder="Your first name"  id="fname"/>
-    <input type="text" name="sname" placeholder="Your second name"  id="sname"/>
-    <input type="text" name="lname" placeholder="Your last name"  id="lname"/>
-    <input type="number" name="phone" placeholder="Your phone number" id="phone"  /><br><br>
-     <input type="text" name="county" placeholder="Your county" id="county"/>
+
     
     
-    
-    <input type="submit" name="submit" value="SUBMIT" id="submit" /><br><br>
-    
-    <input type="button" width="120" name="login" value="LOGIN" class="btn btn-secondary" id="login" onclick="window.location.href='./login.html';"/>
   </div>
   
   <div class="right" style="background-image:url('https://cloudnebulaitke.com/projects/ruiru/img/ruiruteam.jpg')">
       
-    
+ 
     
    
   </div>
-  <div class=""><h1 style="color:#222; margin-left:10px;">ENTER YOUR DETAILS</h1></div>
+  <div class=""><h1 style="color:#222; margin-left:10px;">TOURNAMENTS</h1></div>
 </div>
- <!-- Add Firebase products that you want to use -->
- <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
-</body>   
-</form>  
+
+     
+     
      
 
 
@@ -148,6 +182,7 @@
               <li><a href="">under 11</a></li>
               <li><a href="">under 15</a></li>
                     <li><a href="">under 17</a></li>
+            
             
             </ul>
           </div>
@@ -194,6 +229,16 @@
   outline: none;
 }
 
+
+.nav-link{
+    
+    color:#fff;
+    
+    
+}
+
+
+
 body {
   margin: 0;
   padding: 0;
@@ -207,21 +252,12 @@ body {
 #login-box {
   position: relative;
   margin: 5% auto;
-  width: 800px;
-  height: 800px;
+  width: 1000px;
+  height: 1000px;
   background: #FFF;
   border-radius: 2px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
-
-.nav-link{
-    
-    color:#fff;
-    
-    
-}
-
-
 
 .left {
   position: absolute;
@@ -229,8 +265,9 @@ body {
   left: 0;
   box-sizing: border-box;
   padding: 40px;
-  width: 400px;
-  height: 800px;
+  width: 800px;
+  height: 1000px;
+ background-color:#121552;
 }
 
 h1 {
@@ -309,8 +346,8 @@ input[type="submit"]:active {
   right: 0;
   box-sizing: border-box;
   padding: 40px;
-  width: 400px;
-  height: 800px;
+  width: 200px;
+  height: 1000px;
   background-color:#ffcb04;
   background-size: cover;
   background-position: center;

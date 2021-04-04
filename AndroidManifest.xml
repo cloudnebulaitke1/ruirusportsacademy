@@ -1,0 +1,9 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.ruirusa">
+<apllication
+   android:allowbackup="true"
+   android:icon="./img/ic-launcher-web.png"
+   android:label="RUIRU SPORTS ACADEMY| WEBAPP"
+   android:roundIcon="./img/ic-lancher-web.png"
+   android:supportrtl="true"
+   android:theme=""/>
+</manifest>
