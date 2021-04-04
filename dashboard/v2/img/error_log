@@ -1,0 +1,44 @@
+[30-Mar-2021 23:59:25 UTC] PHP Warning:  require_once(dbconnector.php): failed to open stream: No such file or directory in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/index.php on line 49
+[30-Mar-2021 23:59:25 UTC] PHP Stack trace:
+[30-Mar-2021 23:59:25 UTC] PHP   1. {main}() /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/index.php:0
+[30-Mar-2021 23:59:25 UTC] PHP Fatal error:  require_once(): Failed opening required 'dbconnector.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/index.php on line 49
+[30-Mar-2021 23:59:25 UTC] PHP Stack trace:
+[30-Mar-2021 23:59:25 UTC] PHP   1. {main}() /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/index.php:0
+[31-Mar-2021 00:02:31 UTC] PHP Fatal error:  Cannot redeclare connected_Db() (previously declared in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/index.php:84) in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/dbconnector.php on line 4
+[31-Mar-2021 00:02:31 UTC] PHP Stack trace:
+[31-Mar-2021 00:02:31 UTC] PHP   1. {main}() /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/index.php:0
+[31-Mar-2021 00:14:05 UTC] PHP Parse error:  syntax error, unexpected 'border' (T_STRING) in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/display.php on line 24
+[31-Mar-2021 00:14:07 UTC] PHP Parse error:  syntax error, unexpected 'border' (T_STRING) in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/display.php on line 24
+[31-Mar-2021 00:14:07 UTC] PHP Parse error:  syntax error, unexpected 'border' (T_STRING) in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/display.php on line 24
+[31-Mar-2021 00:14:07 UTC] PHP Parse error:  syntax error, unexpected 'border' (T_STRING) in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/display.php on line 24
+[31-Mar-2021 00:14:07 UTC] PHP Parse error:  syntax error, unexpected 'border' (T_STRING) in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/display.php on line 24
+[31-Mar-2021 00:14:37 UTC] PHP Parse error:  syntax error, unexpected 'border' (T_STRING) in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/display.php on line 24
+[31-Mar-2021 00:14:38 UTC] PHP Parse error:  syntax error, unexpected 'border' (T_STRING) in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/display.php on line 24
+[31-Mar-2021 00:14:38 UTC] PHP Parse error:  syntax error, unexpected 'border' (T_STRING) in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/display.php on line 24
+[31-Mar-2021 00:14:38 UTC] PHP Parse error:  syntax error, unexpected 'border' (T_STRING) in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/display.php on line 24
+[31-Mar-2021 00:14:39 UTC] PHP Parse error:  syntax error, unexpected 'border' (T_STRING) in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/display.php on line 24
+[31-Mar-2021 00:14:39 UTC] PHP Parse error:  syntax error, unexpected 'border' (T_STRING) in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/display.php on line 24
+[31-Mar-2021 00:16:27 UTC] PHP Parse error:  syntax error, unexpected 'border' (T_STRING) in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/display.php on line 24
+[31-Mar-2021 00:16:27 UTC] PHP Parse error:  syntax error, unexpected 'border' (T_STRING) in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/display.php on line 24
+[31-Mar-2021 00:16:28 UTC] PHP Parse error:  syntax error, unexpected 'border' (T_STRING) in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/display.php on line 24
+[31-Mar-2021 00:16:28 UTC] PHP Parse error:  syntax error, unexpected 'border' (T_STRING) in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/display.php on line 24
+[31-Mar-2021 00:16:28 UTC] PHP Parse error:  syntax error, unexpected 'border' (T_STRING) in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/display.php on line 24
+[31-Mar-2021 00:16:28 UTC] PHP Parse error:  syntax error, unexpected 'border' (T_STRING) in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/display.php on line 24
+[31-Mar-2021 00:19:31 UTC] PHP Parse error:  syntax error, unexpected 'border' (T_STRING) in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/display.php on line 24
+[31-Mar-2021 00:19:31 UTC] PHP Parse error:  syntax error, unexpected 'border' (T_STRING) in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/display.php on line 24
+[31-Mar-2021 00:19:32 UTC] PHP Parse error:  syntax error, unexpected 'border' (T_STRING) in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/display.php on line 24
+[31-Mar-2021 00:19:32 UTC] PHP Parse error:  syntax error, unexpected 'border' (T_STRING) in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/display.php on line 24
+[31-Mar-2021 00:19:32 UTC] PHP Parse error:  syntax error, unexpected 'border' (T_STRING) in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/display.php on line 24
+[31-Mar-2021 00:19:32 UTC] PHP Parse error:  syntax error, unexpected 'border' (T_STRING) in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/display.php on line 24
+[31-Mar-2021 00:19:33 UTC] PHP Parse error:  syntax error, unexpected 'border' (T_STRING) in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/display.php on line 24
+[31-Mar-2021 00:19:33 UTC] PHP Parse error:  syntax error, unexpected 'border' (T_STRING) in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/display.php on line 24
+[31-Mar-2021 00:19:34 UTC] PHP Parse error:  syntax error, unexpected 'border' (T_STRING) in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/display.php on line 24
+[31-Mar-2021 00:20:44 UTC] PHP Parse error:  syntax error, unexpected 'border' (T_STRING) in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/display.php on line 24
+[31-Mar-2021 00:20:44 UTC] PHP Parse error:  syntax error, unexpected 'border' (T_STRING) in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/display.php on line 24
+[31-Mar-2021 00:20:44 UTC] PHP Parse error:  syntax error, unexpected 'border' (T_STRING) in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/display.php on line 24
+[31-Mar-2021 00:21:46 UTC] PHP Parse error:  syntax error, unexpected 'border' (T_STRING) in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/display.php on line 42
+[31-Mar-2021 00:21:48 UTC] PHP Parse error:  syntax error, unexpected 'border' (T_STRING) in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/display.php on line 42
+[31-Mar-2021 00:22:06 UTC] PHP Parse error:  syntax error, unexpected 'border' (T_STRING) in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/display.php on line 42
+[31-Mar-2021 00:22:32 UTC] PHP Parse error:  syntax error, unexpected 'border' (T_STRING) in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/display.php on line 42
+[31-Mar-2021 00:24:15 UTC] PHP Parse error:  syntax error, unexpected 'border' (T_STRING) in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/display.php on line 42
+[31-Mar-2021 00:32:22 UTC] PHP Parse error:  syntax error, unexpected 'border' (T_STRING) in /home/zebruyic/cloudnebulaitke.com/projects/ruiru/dashboard/v2/img/display.php on line 42

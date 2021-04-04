@@ -1,3 +1,5 @@
+<?php include('server.php') ?>
+
 <!DOCTYPE html>
 <title>REGISTRATION FORM</title>
 <link rel="shortcut icon" type="image/png" href="./img/ic-launcher-web.png"/>
@@ -11,9 +13,7 @@
     <a class="navbar-brand" href="./index.html">
      <img id="img1" src="./img/ic-launcher-web.jpg" alt="Logo" style="width:40px;">
    </a>
-
-   
-        <li class="nav-item dropdown">
+ <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           COACHING
         </a>
@@ -44,13 +44,19 @@
       <li class="nav-item">
         <a class="nav-link " href="./dashboard/v2">VIEW REPORTS</a>
       </li>
-    
-    <input type="button" id="btn" class="btn btn-primary " value="REGISTER / LOGIN" onclick="window.location.href='register.html'">
+      <li class="nav-item">
+         <input type="button" id="btn"  class="btn btn-primary " value="REGISTER" onclick="window.location.href='/ruirusportsacademy/auth/register.php'">
+      </li>
+      <li class="nav-item">
+       <input type="button" id="btn" class="btn btn-primary " value="LOGIN" onclick="window.location.href='/ruirusportsacademy/auth/login.php'">
+      </li>
+   
+     
   </nav>
   
  
   <hr>
-  <div class="alert alert-success">Success! you are registered</div>
+  <!-- <div class="alert alert-success">Success! you are registered</div> -->
    
   <!--preloader-->
   
@@ -95,30 +101,28 @@
 <div id="login-box">
   <div class="left">
     <form method="POST" action="register.php">
-    
-    
-    <input type="text" name="username" placeholder="Username"  id="username"/>
-    <input type="text" name="email" placeholder="E-mail" id="email"/>
+      <?php include('errors.php'); ?>
+      <input type="text" name="firstname" placeholder="Your first name"  id="fname" value="<?php echo $firstname; ?>"/>
+      <input type="text" name="lastname" placeholder="Your first name"  id="fname" value="<?php echo $lastname; ?>"/>
+    <input type="text" name="username" placeholder="Username"  id="username" value="<?php echo $username; ?>"/>
+     <input type="number" name="phone" placeholder="Your phone number" id="phone" value="<?php echo $phone; ?>" />
+     <br><br>
+     <input type="text" name="email" placeholder="E-mail" id="email" value="<?php echo $email; ?>"/>
+    <input type="text" name="county" placeholder="your county" id="county" value="<?php echo $county; ?>"/>
     <input type="password" name="password_1" placeholder="Password"  id="password_1"/>
     <input type="password" name="password_2" placeholder="Re enter your password"  id="password_2"/>
-    <input type="text" name="fname" placeholder="Your first name"  id="fname"/>
-    <input type="text" name="sname" placeholder="Your second name"  id="sname"/>
-    <input type="text" name="lname" placeholder="Your last name"  id="lname"/>
-    <input type="number" name="phone" placeholder="Your phone number" id="phone"  /><br><br>
-     <input type="text" name="county" placeholder="Your county" id="county"/>
-    
-    
-    
-    <input type="submit" name="submit" value="SUBMIT" id="submit" /><br><br>
-    
-    <input type="button" width="120" name="login" value="LOGIN" class="btn btn-secondary" id="login" onclick="window.location.href='./login.html';"/>
+    <!-- <input type="submit" name="submit" value="SUBMIT" id="submit" /><br><br> -->
+    <div class="input-group">
+      <button type="submit" class="btn" name="reg_user">Register</button>
+    </div>
+     <p>
+      Already a registered? <a href="/ruirusportsacademy/auth/login.php">login</a>
+    </p>
+    <!-- <input type="button" width="120" name="login" value="LOGIN" class="btn btn-secondary" id="login" onclick="window.location.href='./login.html';"/> -->
   </div>
+
   
   <div class="right" style="background-image:url('https://cloudnebulaitke.com/projects/ruiru/img/ruiruteam.jpg')">
-      
-    
-    
-   
   </div>
   <div class=""><h1 style="color:#222; margin-left:10px;">ENTER YOUR DETAILS</h1></div>
 </div>
@@ -542,6 +546,30 @@ button.social-signin.google {
     form{
         background-color:#fff;
     }
+    .btn {
+  padding: 10px;
+  font-size: 15px;
+  color: white;
+  background: #5F9EA0;
+  border: none;
+  border-radius: 5px;
+}
+.error {
+  width: 92%; 
+  margin: 0px auto; 
+  padding: 10px; 
+  border: 1px solid #a94442; 
+  color: #a94442; 
+  background: #f2dede; 
+  border-radius: 5px; 
+  text-align: left;
+}
+.success {
+  color: #3c763d; 
+  background: #dff0d8; 
+  border: 1px solid #3c763d;
+  margin-bottom: 20px;
+}
 
 
 </style>

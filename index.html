@@ -8,30 +8,112 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="manifest" href="manifest.json" />
+    
+ 
+    
+    
+    
     <title>RUIRU SPORTS ACADEMY </title>
+<link rel="shortcut icon" type="image/png" href="./img/ic-launcher-web.png"/>
+...
 <link rel="" href="" >
 </head>
-<!-- Navigation -->
+
+
+<!-- Navigatiopn -->
+
 <nav class="navbar navbar-expand-sm bg-cyan navbar-dark">
     <a class="navbar-brand" href="./index.html">
      <img id="img1" src="./img/ic-launcher-web.jpg" alt="Logo" style="width:40px;">
    </a>
-
-      <li class="nav-item active">
-        <a class="nav-link" href="./coach.html">COACHING</a>
+ 
+     
+        <li  class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          COACHING
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="./coach.html">Coaching schedule register</a>
+          <a class="dropdown-item" href="./coaching-attendance.html">Coaching attendance</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Reports</a>
+        </div>
+      </li>
+      
+     <li  class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          TEAMS
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="./player.html">Register</a>
+          <a class="dropdown-item" href="#">Ratings</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Reports</a>
+        </div>
+      </li>
+     
+     
+      <li class="nav-item">
+        <a class="nav-link" href="./tournaments.html">TOURNAMENTS</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="./player.html">JOIN TEAMS</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">TOURNAMENTS</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link " href="#">VIEW REPORTS</a>
+        <a class="nav-link " href="./dashboard/v2/">VIEW REPORTS</a>
       </li>
     </ul>
     <input type="button" id="btn" class="btn btn-primary " value="REGISTER / LOGIN" onclick="window.location.href='register.html'">
+    
+  
+  
+  
+  
   </nav>
+    
+    
+    
+    <!-- Navigation -->
+    
+    
+    
+    
+  
+  <!--preloader-->
+  
+  <div class="load">
+
+</div>
+
+
+<style>
+   body{background:#8cd7f7}
+
+.load{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);
+  /*change these sizes to fit into your project*/
+  width:100px;
+  height:100px;
+}
+.load hr{border:0;margin:0;width:40%;height:40%;position:absolute;border-radius:50%;animation:spin 2s ease infinite}
+
+.load :first-child{background:#ffcb04;animation-delay:-1.5s}
+.load :nth-child(2){background:#121552;animation-delay:-1s}
+.load :nth-child(3){background:#8cd7f7;animation-delay:-0.5s}
+.load :last-child{background:#193B48}
+
+@keyframes spin{
+  0%,100%{transform:translate(0)}
+  25%{transform:translate(160%)}
+  50%{transform:translate(160%, 160%)}
+  75%{transform:translate(0, 160%)}
+} 
+    
+    
+   .navbar{background-color:#121552;} 
+    
+    
+    
+</style>
+  
+  <!---preloader-->
 
 
   <!--page-content-slider-->
@@ -80,7 +162,7 @@ https://flickity.metafizzy.co
 .flickity-enabled.is-draggable
 .flickity-viewport.is-pointer-down{cursor:-webkit-grabbing;cursor:grabbing}
 .flickity-button{position:absolute;background:hsla(0,0%,100%,.75);border:none;color:white;border-radius:26px; }
-.flickity-button:hover{background:#8cd7f7;cursor:pointer}.flickity-button:focus{outline:0;box-shadow:0 0 0 5px #19f}
+.flickity-button:hover{background:#ffcb04;cursor:pointer}.flickity-button:focus{outline:0;box-shadow:0 0 0 5px #19f}
 .flickity-button:active{opacity:.6}.flickity-button:disabled{opacity:.3;cursor:auto;pointer-events:none}.flickity-button-icon{fill:currentColor}
 .flickity-prev-next-button{top:50%;width:44px;height:44px;border-radius:5%;transform:translateY(-50%)}
 .flickity-prev-next-button.previous{left:10px}
@@ -93,6 +175,7 @@ https://flickity.metafizzy.co
    
    
    
+ 
 </style>
 <!-- JavaScript -->
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
@@ -104,14 +187,22 @@ https://flickity.metafizzy.co
   <div class="carousel-cell">   <div class="cov"><div class="front"><img src="" ></div></div>
 <h4><center><strong><br></strong></center><br></h4><div class="back"><p></p></div></div>
  
-  <div class="carousel-cell"><div class="cover3"><div class="front"><img class="cover" src="" ></div></div>
+  <div class="carousel-cell"><div class="cover3"><div class="front">
+    
+      <img class="cover" src="" ></div></div>
 </div>
-  <div class="carousel-cell"><link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+  <div class="carousel-cell">
+      
+      <iframe width="300" height="300" src="https://www.youtube.com/embed/Z4jfYT1uRk0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      
+      
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
   <div class="cover">
   
   <div class="w3-container w3-center">
     
-   
+    
+
     
     
     <style>
@@ -141,6 +232,8 @@ https://flickity.metafizzy.co
 <div class="carousel-cell">
     <div class="cover5">
         <div class="cover-img5">
+            
+            <iframe width="300" height="300" src="https://www.youtube.com/embed/p4oumwDZmr4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <img src=""></div></div>
        <h4><strong> </strong><br>
        
@@ -149,6 +242,12 @@ https://flickity.metafizzy.co
 </div>
 
 <style>
+
+
+
+
+
+
  /* external css: flickity.css */
 
 * {
@@ -372,7 +471,7 @@ p { color:m;
 
  .carousel-cell .cover5 {
 	/* The image used */
-  background-image: url("./img/teamwork.png");
+  background-image: url("./img/ruiruad.jpeg"); width:300; height:300;
 
   /* Full height */
   height: 100%; 
@@ -558,24 +657,208 @@ p{margin: 0;
 
 <!--flickity-slider-->
 <br><br>
+
+
+
+
+<!--waves-->
+
+
+
+<!--Hey! This is the original version
+of Simple CSS Waves-->
+
+<div class="header">
+
+<!--Content before waves-->
+<div class="inner-header flex">
+<!--Just the logo.. Don't mind this-->
+<svg version="1.1" class="logo" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" xml:space="preserve">
+<path fill="#FFFFFF" stroke="#000000" stroke-width="10" stroke-miterlimit="10" d="M57,283" />
+<g><path fill="#fff"
+d="M250.4,0.8C112.7,0.8,1,112.4,1,250.2c0,137.7,111.7,249.4,249.4,249.4c137.7,0,249.4-111.7,249.4-249.4
+C499.8,112.4,388.1,0.8,250.4,0.8z M383.8,326.3c-62,0-101.4-14.1-117.6-46.3c-17.1-34.1-2.3-75.4,13.2-104.1
+c-22.4,3-38.4,9.2-47.8,18.3c-11.2,10.9-13.6,26.7-16.3,45c-3.1,20.8-6.6,44.4-25.3,62.4c-19.8,19.1-51.6,26.9-100.2,24.6l1.8-39.7		c35.9,1.6,59.7-2.9,70.8-13.6c8.9-8.6,11.1-22.9,13.5-39.6c6.3-42,14.8-99.4,141.4-99.4h41L333,166c-12.6,16-45.4,68.2-31.2,96.2	c9.2,18.3,41.5,25.6,91.2,24.2l1.1,39.8C390.5,326.2,387.1,326.3,383.8,326.3z" />
+</g>
+</svg>
+<h1>Offering quality proffessional sports training</h1>
+</div>
+
+<!--Waves Container-->
+<div>
+<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+<defs>
+<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+</defs>
+<g class="parallax">
+<use xlink:href="#gentle-wave" x="48" y="0" fill="#fff" />
+<use xlink:href="#gentle-wave" x="48" y="3" fill="#121552" />
+<use xlink:href="#gentle-wave" x="48" y="5" fill="#ffcb04" />
+<use xlink:href="#gentle-wave" x="48" y="7" fill="#8cd7f7" />
+</g>
+</svg>
+</div>
+<!--Waves end-->
+
+</div>
+<!--Header ends-->
+
+<!--Content starts-->
+
+
+
+
+<!--Content ends-->
+<style>
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+body {
+  margin:0;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight:300;
+  letter-spacing: 2px;
+  font-size:48px;
+}
+p {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
+  font-size:14px;
+  color: #333333;
+}
+
+.header {
+  position:relative;
+  text-align:center;
+  background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+  color:white;
+}
+.logo {
+  width:50px;
+  fill:white;
+  padding-right:15px;
+  display:inline-block;
+  vertical-align: middle;
+}
+
+.inner-header {
+  height:65vh;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flex { /*Flexbox for containers*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.waves {
+  position:relative;
+  width: 100%;
+  height:15vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:100px;
+  max-height:150px;
+}
+
+.content {
+  position:relative;
+  height:20vh;
+  text-align:center;
+  background-color: white;
+}
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height:40px;
+    min-height:40px;
+  }
+  .content {
+    height:30vh;
+  }
+  h1 {
+    font-size:24px;
+  }
+}
+
+
+
+
+
+</style>
+
+
+
+
+
+
+<!--waves-->
+
+
+
+
+
+
+
+
+
 <footer>
   <!-- Site footer -->
   <footer class="site-footer">
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-md-6">
-          <h6>About</h6>
-          <p class="text-justify">Ruiru Sports Academy <br><i>P.O. BOX 2320 </i> <br><i>RUIRU,KENYA </i><br><i>TEL: 0714 990364 </i>.</p>
+          <h6 id="a6">About</h6>
+          <p id="a6" class="text-justify">Ruiru Sports Academy <br><i>P.O. BOX 2320 </i> <br><i>RUIRU,KENYA </i><br><i>TEL: 0714 990364 </i>.</p>
+         <style>#a6{color:#fff;}</style>
         </div>
 
         <div class="col-xs-6 col-md-3">
           <h6>Categories</h6>
           <ul class="footer-links">
-            <li><a href="">  under 17</a></li>
-            <li><a href="">under 15</a></li>
-            <li><a href="">under 13</a></li>
-            <li><a href="">under 5</a></li>
-          
+              <li><a href="">  under 7</a></li>
+              <li><a href="">under 9</a></li>
+              <li><a href="">under 11</a></li>
+              <li><a href="">under 15</a></li>
+                    <li><a href="">under 17</a></li>
+            
           </ul>
         </div>
 
@@ -595,10 +878,10 @@ p{margin: 0;
     <div class="container">
       <div class="row">
         <div class="col-md-8 col-sm-6 col-xs-12">
-          <p class="copyright-text">RUIRUSPORTS-ACADEMY Copyright &copy; 2021 All Rights Reserved by 
+          <p id="a6f" class="copyright-text">RUIRUSPORTS-ACADEMY Copyright &copy; 2021 All Rights Reserved by 
        <a href="https://cloudnebulaitke.com">cloudnebulaitke</a>.
           </p>
-        </div>
+        </div><style>#a6f{color:#fff;}</style>
 
         <div class="col-md-4 col-sm-6 col-xs-12">
           <ul class="social-icons">
@@ -615,7 +898,7 @@ p{margin: 0;
 
 .site-footer
 {
-  background-color:#26272b;
+  background-color:#222;
   padding:45px 0 20px;
   font-size:15px;
   line-height:24px;

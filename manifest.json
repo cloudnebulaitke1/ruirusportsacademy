@@ -1,0 +1,19 @@
+{
+  "name": "Ruiru Sports Academy | Webapp ",
+  "short_name": "ruiru",
+  "categories":["education","sports"],
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#8cd7f7",
+  "theme_color": "#8cd7f7",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/img/ic-launcher-web.jpg",
+      "type": "image/jpeg", "sizes": "4927x5544"
+    }
+    
+   
+    
+  ]
+}

@@ -1,328 +1,604 @@
-<DOCTYPE html>
-    
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-            <title>COACH PROGRAM</title>
-          </head>
+<!DOCTYPE html>
+<title>COACHING SCHEDULE FORM</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-<!-- Navigation -->
+    <!-- Navigation -->
 <nav class="navbar navbar-expand-sm bg-cyan navbar-dark">
-  <a class="navbar-brand" href="./index.html">
-   <img id="img1" src="./img/ic-launcher-web.jpg" alt="Logo" style="width:40px;">
- </a>
+    <a class="navbar-brand" href="./index.html">
+     <img id="img1" src="./img/ic-launcher-web.jpg" alt="Logo" style="width:40px;">
+   </a>
 
-    <li class="nav-item active">
-      <a class="nav-link" href="./coach.html">COACHING</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="./player.html">JOIN TEAMS</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">TOURNAMENTS</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link " href="#">VIEW REPORTS</a>
-    </li>
-  </ul>
-  <input type="button" id="btn" class="btn btn-primary " value="REGISTER / LOGIN" onclick="window.location.href='register.html'">
-</nav>
-        <hr>
-        
-        
+   
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          COACHING
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="./coach.html">Coaching schedule register</a>
+          <a class="dropdown-item" href="./coaching-attendance.html">Coaching attendance</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Reports</a>
+        </div>
+      </li>
+      
+     <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          TEAMS
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="./player.html">Register</a>
+          <a class="dropdown-item" href="#">Ratings</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Reports</a>
+        </div>
+      </li>
+      
+     
+      <li class="nav-item">
+        <a class="nav-link" href="./tournaments.html">TOURNAMENTS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="./dashboard/v2/">VIEW REPORTS</a>
+      </li>
+    
+    <input type="button" id="btn" class="btn btn-primary " value="REGISTER / LOGIN" onclick="window.location.href='register.html'">
+  </nav>
+  
+ 
+  <hr>
+  <div class="alert alert-success">Success! you are registered</div>
+   
+  <!--preloader-->
+  
+  <div class="load">
+      <hr><hr><hr><hr>
+
+</div>
+
+
+<style>
+.navbar{background-color:#121552;}
+   body{background:#8cd7f7}
+
+.load{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);
+  /*change these sizes to fit into your project*/
+  width:100px;
+  height:100px;
+}
+.load hr{border:0;margin:0;width:40%;height:40%;position:absolute;border-radius:50%;animation:spin 2s ease infinite}
+
+.load :first-child{background:#19A68C;animation-delay:-1.5s}
+.load :nth-child(2){background:#F63D3A;animation-delay:-1s}
+.load :nth-child(3){background:#FDA543;animation-delay:-0.5s}
+.load :last-child{background:#193B48}
+
+@keyframes spin{
+  0%,100%{transform:translate(0)}
+  25%{transform:translate(160%)}
+  50%{transform:translate(160%, 160%)}
+  75%{transform:translate(0, 160%)}
+} 
     
     
-    <body>
-    <div class="alert alert-success" >Success! Successfully submitted.
-    </div>
-    <form class="form "type="" method="POST" id="form">
     
-    <h1>COACHING PROGRAM REGISTER</h1>
     
+    
+    
+</style>
+  
+  <!--preloader-->
+ 
+<div id="login-box">
+  <div class="left">
+    <h1>Sign up</h1>
+    <input type="text" name="name" placeholder="Full names of coach"  id="name"/>
     <label for="date">Date</label>
-    <input type="date" name="date" id="date"><br><br>
-    <label for="fname">Full Names</label>
-    <input type="text" name="fname" id="fname"><br><br>
-    <label for="category">Categories</label>
-    <select type="" name="category" id="category">
-     <option>U17</option>
-     <option>U15</option>
-     <option>U10</option>
-     <option>U5</option>
-    </select>
-    <label for="lname">Topic</label>
-    <input type="text" name="topic" id="topic"><br><br>
-    <label for="stopic">Sub topic</label>
-    <input type="text" name="stopic" id="stopic"><br><br>
-    <label for="drill">Drill</label>
-    <input type="text" name="drill" id="drill"><br><br>
-    <label for="objective">Objective</label>
-    <textarea type="text" name="objective" id="objective"></textarea></textarea><br><br>
-    <label for="Descriptions">Descriptions</label>
-    <textarea  name="describe" id="describe"></textarea><br><br>
-    <label for="warmup">Warm up</label>
-    <input type="time" name="warm" id="warm">
-    <label for="fwarm">To</label>
-    <input type="time" name="fwarm" id="fwarm"><br>
-    <label for="mbody">Main body</label>
-    <textarea type="" name="mbody" id="mbody"></textarea><br>
-    <label for="remarks">Remarks</label>
-    <textarea type="remarks" name="remarks" id="remarks"></textarea>
-    <hr>
-    <input type="submit" class="btn btn-primary" value="submit" name="submit" id="submit">
-    <input type="button" class="btn  btn-secondary" value="clear" name=clear id="clear" onclick="document.getElementById('form').reset();">
-    <input type="button"  value="go back" class="btn btn-success" onclick="window.location.href='./index.html';">
-    </form>
-    </div>
+    <input type="date" name="date" placeholder=""  id="date"/>
+    <br><br>
+        <label for="category"><strong>Category</strong></label>
+    <select type="option" name="category"   id="category">
+    <option>Under 7</option>
+    <option>Under 9</option>
+    <option>Under 11</option>
+    <option>Under 15</option>
+    <option>Under 17</option>
+    
+    </select><hr>
+    
+    <input type="text" placeholder="Topic" name="topic" id="topic"/>
+    <input type="text" placeholder="Sub topic" name="stopic" id="stopic"/>
+    <input type="text" placeholder="Drill" name="drill" id="drill"/>
+    <input type="text" placeholder="Objectives" name="objectives" id="objectives"/><hr>
+    <textarea name="textarea" id="textarea">Description</textarea><br><br>
+    <textarea name="illustration" id="illustration">Illustrations</textarea><br>
+    <label for="time_in">Warm up start</label><br>
+    <input type="time" name="bwarm_up" placeholder=""  id="bwarm_up"/><br>
+    <label for="time_out">Warm up end</label><br>
+    <input type="time" name="ewarm_up" placeholder=""  id="ewarm_up"/><br>
+     
+    
+   <br><br>
+     
     
     
-    </body>
+    
+    <input type="submit" name="signup_submit" value="SUBMIT" id="submit" onclick=""/><br><br>
+    
+    
+  </div>
+  
+  <div class="right" style="background-image:url('https://cloudnebulaitke.com/projects/ruiru/img/ruiruteam.jpg')">
+      
+    
+    
+   
+  </div>
+  <div class=""><h1 style="color:#222; margin-left:10px;">COACHING SCHEDULE </h1></div>
+</div>
 
-    <footer>
-      <!-- Site footer -->
-      <footer class="site-footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-6">
-              <h6>About</h6>
-              <p class="text-justify">Ruiru Sports Academy <br><i>P.O. BOX 2320 </i> <br><i>RUIRU,KENYA </i><br><i>TEL: 0714 990364 </i>.</p>
-            </div>
-    
-            <div class="col-xs-6 col-md-3">
-              <h6>Categories</h6>
-              <ul class="footer-links">
-                <li><a href="">  under 17</a></li>
-                <li><a href="">under 15</a></li>
-                <li><a href="">under 13</a></li>
-                <li><a href="">under 5</a></li>
-              
-              </ul>
-            </div>
-    
-            <div class="col-xs-6 col-md-3">
-              <h6>Quick Links</h6>
-              <ul class="footer-links">
-                <li><a href="">Coaching</a></li>
-                <li><a href="">Join teams</a></li>
-                <li><a href="">Tornaments</a></li>
-                <li><a href="">View reports</a></li>
-              
-              </ul>
-            </div>
+     
+     
+     
+
+
+
+  <footer>
+    <!-- Site footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify">Ruiru Sports Academy <br><i>P.O. BOX 2320 </i> <br><i>RUIRU,KENYA </i><br><i>TEL: 0714 990364 </i>.</p>
           </div>
-          <hr>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8 col-sm-6 col-xs-12">
-              <p class="copyright-text">RUIRUSPORTS-ACADEMY Copyright &copy; 2021 All Rights Reserved by 
-           <a href="https://cloudnebulaitke.com">cloudnebulaitke</a>.
-              </p>
-            </div>
-    
-            <div class="col-md-4 col-sm-6 col-xs-12">
-              <ul class="social-icons">
-                <li><a class="facebook" href="https://www.facebook.com/ruirusportsacademy/"><i class="fa fa-facebook"></i></a></li>
-                <li><a class="twitter" href="https://twitter.com/ruirusports"><i class="fa fa-twitter"></i></a></li>
-                <li><a class="instagram" href="https://www.instagram.com/ruirusports/"><i class="fa fa-instagram"></i></a></li>
-                <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
-              </ul>
-            </div>
+  
+          <div class="col-xs-6 col-md-3">
+            <h6>Categories</h6>
+            <ul class="footer-links">
+                 <li><a href="">  under 7</a></li>
+              <li><a href="">under 9</a></li>
+              <li><a href="">under 11</a></li>
+              <li><a href="">under 15</a></li>
+                    <li><a href="">under 17</a></li>
+            
+            </ul>
+          </div>
+  
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="">Coaching</a></li>
+              <li><a href="">Join teams</a></li>
+              <li><a href="">Tornaments</a></li>
+              <li><a href="">View reports</a></li>
+            
+            </ul>
           </div>
         </div>
-    </footer>
-    <style>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">RUIRUSPORTS-ACADEMY Copyright &copy; 2021 All Rights Reserved by 
+         <a href="https://cloudnebulaitke.com">cloudnebulaitke</a>.
+            </p>
+          </div>
+  
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="https://www.facebook.com/ruirusportsacademy/"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="https://twitter.com/ruirusports"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="instagram" href="https://www.instagram.com/ruirusports/"><i class="fa fa-instagram"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+  </footer>
+  
+  <!---form-css-->
+  <style>
+      
+      
+    @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+*:focus {
+  outline: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #DDD;
+  font-size: 16px;
+  color: #222;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+#login-box {
+  position: relative;
+  margin: 5% auto;
+  width: 1000px;
+  height: 900px;
+  background: #FFF;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.nav-link{
     
+    color:#fff;
+    
+    
+}
+
+
+.left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 40px;
+  width: 400px;
+  height: 900px;
+}
+
+h1 {
+  margin: 0 0 20px 0;
+  font-weight: 300;
+  font-size: 28px;
+}
+
+input[type="text"],
+input[type="password"] {
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 4px;
+  width: 220px;
+  height: 32px;
+  border: none;
+  border-bottom: 1px solid #AAA;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  transition: 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-bottom: 2px solid #16a085;
+  color: #16a085;
+  transition: 0.2s ease;
+}
+
+input[type="submit"] {
+  margin-top: 28px;
+  width: 120px;
+  height: 36px;
+  background: #8cd7f7;
+  border: none;
+  border-radius: 2px;
+  color: #FFF;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: 0.1s ease;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  opacity: 0.8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: 0.1s ease;
+}
+
+input[type="submit"]:active {
+  opacity: 1;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  transition: 0.1s ease;
+}
+
+.or {
+  position: absolute;
+  top: 180px;
+  left: 280px;
+  width: 40px;
+  height: 40px;
+  background: #DDD;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  line-height: 40px;
+  text-align: center;
+}
+
+.right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+  padding: 40px;
+  width: 480px;
+  height: 900px;
+  background-color:#ffcb04;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 2px 2px 0;
+
+
+.right .loginwith {
+  display: block;
+  margin-bottom: 40px;
+  font-size: 28px;
+  color: #FFF;
+  text-align: center;
+}
+
+button.social-signin {
+  margin-bottom: 20px;
+  width: 220px;
+  height: 36px;
+  border: none;
+  border-radius: 2px;
+  color: #FFF;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+button.social-signin:hover,
+button.social-signin:focus {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: 0.2s ease;
+}
+
+button.social-signin:active {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  transition: 0.2s ease;
+}
+
+button.social-signin.facebook {
+  background: #32508E;
+}
+
+button.social-signin.twitter {
+  background: #55ACEE;
+}
+
+button.social-signin.google {
+  background: #DD4B39;
+}  
+      
+  </style>
+  
+  
+  <style>
+  
+  .site-footer
+  {
+    background-color:#222;
+    padding:45px 0 20px;
+    font-size:15px;
+    line-height:24px;
+    color:#737373;
+  }
+  .site-footer hr
+  {
+    border-top-color:#bbb;
+    opacity:0.5
+  }
+  .site-footer hr.small
+  {
+    margin:20px 0
+  }
+  .site-footer h6
+  {
+    color:#fff;
+    font-size:16px;
+    text-transform:uppercase;
+    margin-top:5px;
+    letter-spacing:2px
+  }
+  .site-footer a
+  {
+    color:#737373;
+  }
+  .site-footer a:hover
+  {
+    color:#3366cc;
+    text-decoration:none;
+  }
+  .footer-links
+  {
+    padding-left:0;
+    list-style:none
+  }
+  .footer-links li
+  {
+    display:block
+  }
+  .footer-links a
+  {
+    color:#737373
+  }
+  .footer-links a:active,.footer-links a:focus,.footer-links a:hover
+  {
+    color:#3366cc;
+    text-decoration:none;
+  }
+  .footer-links.inline li
+  {
+    display:inline-block
+  }
+  .site-footer .social-icons
+  {
+    text-align:right
+  }
+  .site-footer .social-icons a
+  {
+    width:40px;
+    height:40px;
+    line-height:40px;
+    margin-left:6px;
+    margin-right:0;
+    border-radius:100%;
+    background-color:#33353d
+  }
+  .copyright-text
+  {
+    margin:0
+  }
+  @media (max-width:991px)
+  {
+    .site-footer [class^=col-]
+    {
+      margin-bottom:30px
+    }
+  }
+  @media (max-width:767px)
+  {
     .site-footer
     {
-      background-color:#26272b;
-      padding:45px 0 20px;
-      font-size:15px;
-      line-height:24px;
-      color:#737373;
+      padding-bottom:0
     }
-    .site-footer hr
+    .site-footer .copyright-text,.site-footer .social-icons
     {
-      border-top-color:#bbb;
-      opacity:0.5
+      text-align:center
     }
-    .site-footer hr.small
-    {
-      margin:20px 0
-    }
-    .site-footer h6
-    {
-      color:#fff;
-      font-size:16px;
-      text-transform:uppercase;
-      margin-top:5px;
-      letter-spacing:2px
-    }
-    .site-footer a
-    {
-      color:#737373;
-    }
-    .site-footer a:hover
-    {
-      color:#3366cc;
-      text-decoration:none;
-    }
-    .footer-links
-    {
-      padding-left:0;
-      list-style:none
-    }
-    .footer-links li
-    {
-      display:block
-    }
-    .footer-links a
-    {
-      color:#737373
-    }
-    .footer-links a:active,.footer-links a:focus,.footer-links a:hover
-    {
-      color:#3366cc;
-      text-decoration:none;
-    }
-    .footer-links.inline li
-    {
-      display:inline-block
-    }
-    .site-footer .social-icons
-    {
-      text-align:right
-    }
-    .site-footer .social-icons a
-    {
-      width:40px;
-      height:40px;
-      line-height:40px;
-      margin-left:6px;
-      margin-right:0;
-      border-radius:100%;
-      background-color:#33353d
-    }
-    .copyright-text
-    {
-      margin:0
-    }
-    @media (max-width:991px)
-    {
-      .site-footer [class^=col-]
-      {
-        margin-bottom:30px
-      }
-    }
-    @media (max-width:767px)
-    {
-      .site-footer
-      {
-        padding-bottom:0
-      }
-      .site-footer .copyright-text,.site-footer .social-icons
-      {
-        text-align:center
-      }
-    }
-    .social-icons
-    {
-      padding-left:0;
-      margin-bottom:0;
-      list-style:none
-    }
-    .social-icons li
-    {
-      display:inline-block;
-      margin-bottom:4px
-    }
+  }
+  .social-icons
+  {
+    padding-left:0;
+    margin-bottom:0;
+    list-style:none
+  }
+  .social-icons li
+  {
+    display:inline-block;
+    margin-bottom:4px
+  }
+  .social-icons li.title
+  {
+    margin-right:15px;
+    text-transform:uppercase;
+    color:#96a2b2;
+    font-weight:700;
+    font-size:13px
+  }
+  .social-icons a{
+    background-color:#eceeef;
+    color:#818a91;
+    font-size:16px;
+    display:inline-block;
+    line-height:44px;
+    width:44px;
+    height:44px;
+    text-align:center;
+    margin-right:8px;
+    border-radius:100%;
+    -webkit-transition:all .2s linear;
+    -o-transition:all .2s linear;
+    transition:all .2s linear
+  }
+  .social-icons a:active,.social-icons a:focus,.social-icons a:hover
+  {
+    color:#222;
+    background-color:#29aafe
+  }
+  .social-icons.size-sm a
+  {
+    line-height:34px;
+    height:34px;
+    width:34px;
+    font-size:14px
+  }
+  .social-icons a.facebook:hover
+  {
+    background-color:#3b5998
+  }
+  .social-icons a.twitter:hover
+  {
+    background-color:#00aced
+  }
+  .social-icons a.linkedin:hover
+  {
+    background-color:#007bb6
+  }
+  .social-icons a.dribbble:hover
+  {
+    background-color:#ea4c89
+  }
+  @media (max-width:767px)
+  {
     .social-icons li.title
     {
-      margin-right:15px;
-      text-transform:uppercase;
-      color:#96a2b2;
-      font-weight:700;
-      font-size:13px
+      display:block;
+      margin-right:0;
+      font-weight:600
     }
-    .social-icons a{
-      background-color:#eceeef;
-      color:#818a91;
-      font-size:16px;
-      display:inline-block;
-      line-height:44px;
-      width:44px;
-      height:44px;
-      text-align:center;
-      margin-right:8px;
-      border-radius:100%;
-      -webkit-transition:all .2s linear;
-      -o-transition:all .2s linear;
-      transition:all .2s linear
+  }
+  
+
+    body{
+        background-color:#8cd7f7;
+        background-image:url('https://cloudnebulaitke.com/projects/ruiru/img/ruiruteam.png');
+        background-repeat:no-repeat;
+        background-size:cover;
     }
-    .social-icons a:active,.social-icons a:focus,.social-icons a:hover
-    {
-      color:#222;
-      background-color:#29aafe
-    }
-    .social-icons.size-sm a
-    {
-      line-height:34px;
-      height:34px;
-      width:34px;
-      font-size:14px
-    }
-    .social-icons a.facebook:hover
-    {
-      background-color:#3b5998
-    }
-    .social-icons a.twitter:hover
-    {
-      background-color:#00aced
-    }
-    .social-icons a.linkedin:hover
-    {
-      background-color:#007bb6
-    }
-    .social-icons a.dribbble:hover
-    {
-      background-color:#ea4c89
-    }https://www.airmeet.com/e/34528840-8bce-11eb-b0ad-e19826cea63b
-    @media (max-width:767px)
-    {
-      .social-icons li.title
-      {
-        display:block;
-        margin-right:0;
-        font-weight:600
-      }
-    }
+    h1{color:#fff;}
     
-    </style>
-    
-    <style>
-        body{
-            background-color:#8cd7f7;
-        }
-        h1{color:#fff;}
-    </style>
-    
+    form{
+        background-color:#fff;
+    }
+
+
+</style>
+
+
+
+
+
+
 
 <script>
-        //show alert
-    document.querySelector('.alert').style.display='block';
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
 
-    //hide alert
-    setTimeout(function() {
-        document.querySelector('.alert').style.display='none';
-    },3000
 
-    );
-    
-    
+
+
+
+    //show alert
+document.querySelector('.alert').style.display='block';
+
+//hide alert
+setTimeout(function() {
+    document.querySelector('.alert').style.display='none';
+},3000
+
+);
+
+
 </script>
-
-
-    </html>

@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<title>REGISTRATION FORM</title>
+<title>LOGIN FORM</title>
 <link rel="shortcut icon" type="image/png" href="./img/ic-launcher-web.png"/>
-
+...
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -12,13 +14,12 @@
      <img id="img1" src="./img/ic-launcher-web.jpg" alt="Logo" style="width:40px;">
    </a>
 
-   
-        <li class="nav-item dropdown">
+      <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           COACHING
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="./coaching.html">Coaching schedule register</a>
+          <a class="dropdown-item" href="./coach.html">Coaching schedule register</a>
           <a class="dropdown-item" href="./coaching-attendance.html">Coaching attendance</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Reports</a>
@@ -42,76 +43,36 @@
         <a class="nav-link" href="./tournaments.html">TOURNAMENTS</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link " href="./dashboard/v2">VIEW REPORTS</a>
+        <a class="nav-link " href="#">VIEW REPORTS</a>
       </li>
     
     <input type="button" id="btn" class="btn btn-primary " value="REGISTER / LOGIN" onclick="window.location.href='register.html'">
   </nav>
   
- 
   <hr>
-  <div class="alert alert-success">Success! you are registered</div>
-   
-  <!--preloader-->
+  <div class="alert alert-success">Success! you are now login in </div>
+ 
   
-  <div class="load">
-      <hr><hr><hr><hr>
-
-</div>
+  <body>
 
 
-<style>
-   body{background:#8cd7f7}
-   .navbar{background-color:#121552;}
-
-.load{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);
-  /*change these sizes to fit into your project*/
-  width:100px;
-  height:100px;
-}
-.load hr{border:0;margin:0;width:40%;height:40%;position:absolute;border-radius:50%;animation:spin 2s ease infinite}
-
-.load :first-child{background:#FFCB04;animation-delay:-1.5s}
-.load :nth-child(2){background:#121552;animation-delay:-1s}
-.load :nth-child(3){background:#8CD7F7;animation-delay:-0.5s}
-.load :last-child{background:#FFF}
-
-@keyframes spin{
-  0%,100%{transform:translate(0)}
-  25%{transform:translate(160%)}
-  50%{transform:translate(160%, 160%)}
-  75%{transform:translate(0, 160%)}
-} 
-    
-    
-    
-    
-    
-    
-</style>
-  
-  <!--preloader-->
- <body>
 <div id="login-box">
   <div class="left">
-    <form method="POST" action="register.php">
+    <form method="POST">
     
-    
+    <br>
     <input type="text" name="username" placeholder="Username"  id="username"/>
     <input type="text" name="email" placeholder="E-mail" id="email"/>
-    <input type="password" name="password_1" placeholder="Password"  id="password_1"/>
-    <input type="password" name="password_2" placeholder="Re enter your password"  id="password_2"/>
-    <input type="text" name="fname" placeholder="Your first name"  id="fname"/>
-    <input type="text" name="sname" placeholder="Your second name"  id="sname"/>
-    <input type="text" name="lname" placeholder="Your last name"  id="lname"/>
+    <input type="password" name="password" placeholder="Password"  id="password"/>
+
     <input type="number" name="phone" placeholder="Your phone number" id="phone"  /><br><br>
-     <input type="text" name="county" placeholder="Your county" id="county"/>
+  
+   
     
     
+    <input type="submit" name="signup_submit" value="SUBMIT" id="submit" onclick=""/><br><br>
     
-    <input type="submit" name="submit" value="SUBMIT" id="submit" /><br><br>
-    
-    <input type="button" width="120" name="login" value="LOGIN" class="btn btn-secondary" id="login" onclick="window.location.href='./login.html';"/>
+    <input type="button" width="120" name="register" value="REGISTER" class="btn btn-secondary" id="login" onclick="window.location.href='./register.html';"/>
   </div>
   
   <div class="right" style="background-image:url('https://cloudnebulaitke.com/projects/ruiru/img/ruiruteam.jpg')">
@@ -120,14 +81,20 @@
     
    
   </div>
-  <div class=""><h1 style="color:#222; margin-left:10px;">ENTER YOUR DETAILS</h1></div>
+  <div class=""><h1 style="color:#222; margin-left:10px;">LOGIN</h1></div>
 </div>
+
+
+
+
+
+
+</form>
  <!-- Add Firebase products that you want to use -->
  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
-</body>   
-</form>  
-     
 
+
+  </body>
 
 
   <footer>
@@ -143,11 +110,10 @@
           <div class="col-xs-6 col-md-3">
             <h6>Categories</h6>
             <ul class="footer-links">
-                  <li><a href="">  under 7</a></li>
-              <li><a href="">under 9</a></li>
-              <li><a href="">under 11</a></li>
+              <li><a href="">  under 17</a></li>
               <li><a href="">under 15</a></li>
-                    <li><a href="">under 17</a></li>
+              <li><a href="">under 13</a></li>
+              <li><a href="">under 5</a></li>
             
             </ul>
           </div>
@@ -185,7 +151,9 @@
       </div>
   </footer>
   
-  <!---form-css--->
+  
+  
+   <!---form-css--->
   <style>
       
       
@@ -208,11 +176,12 @@ body {
   position: relative;
   margin: 5% auto;
   width: 800px;
-  height: 800px;
+  height: 600px;
   background: #FFF;
   border-radius: 2px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
+
 
 .nav-link{
     
@@ -221,8 +190,6 @@ body {
     
 }
 
-
-
 .left {
   position: absolute;
   top: 0;
@@ -230,7 +197,7 @@ body {
   box-sizing: border-box;
   padding: 40px;
   width: 400px;
-  height: 800px;
+  height: 600px;
 }
 
 h1 {
@@ -310,8 +277,8 @@ input[type="submit"]:active {
   box-sizing: border-box;
   padding: 40px;
   width: 400px;
-  height: 800px;
-  background-color:#ffcb04;
+  height: 600px;
+  background-color:#8cd7f7;
   background-size: cover;
   background-position: center;
   border-radius: 0 2px 2px 0;
@@ -368,7 +335,7 @@ button.social-signin.google {
   
   .site-footer
   {
-    background-color:#222;
+    background-color:#26272b;
     padding:45px 0 20px;
     font-size:15px;
     line-height:24px;
@@ -530,52 +497,21 @@ button.social-signin.google {
     }
   }
   
+  </style>
 
+
+  <style>
     body{
         background-color:#8cd7f7;
-        background-image:url('https://cloudnebulaitke.com/projects/ruiru/img/ruiruteam.png');
+         background-image:url('https://cloudnebulaitke.com/projects/ruiru/img/ruiruteam.png');
         background-repeat:no-repeat;
         background-size:cover;
     }
     h1{color:#fff;}
-    
-    form{
-        background-color:#fff;
-    }
-
-
 </style>
 
 
-
-
-
-
-
 <script>
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
-})();
-
-
-
-
-
     //show alert
 document.querySelector('.alert').style.display='block';
 

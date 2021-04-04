@@ -1,6 +1,71 @@
+<?php
+session_start();
+
+// initializing variables
+$username = "";
+$email    = "";
+$errors = array(); 
+
+// connect to the database
+$db = mysqli_connect('localhost', 'zebruyic_ruirusa', 'kensta879097', 'zebruyic_ruirusa');
+
+// REGISTER USER
+if (isset($_POST['submit'])) {
+  // receive all input values from the form
+  $fname = mysqli_real_escape_string($db, $_POST['fname']);
+  $sname = mysqli_real_escape_string($db, $_POST['sname']);
+  $lname = mysqli_real_escape_string($db, $_POST['lname']);
+  $email = mysqli_real_escape_string($db, $_POST['email']);
+  $username = mysqli_real_escape_string($db, $_POST['username']);
+  $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
+  $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
+  $phone = mysqli_real_escape_string($db, $_POST['phone']);
+  $nationality = mysqli_real_escape_string($db, $_POST['nationality']);
+  $county = mysqli_real_escape_string($db, $_POST['county']);
+  $position = mysqli_real_escape_string($db, $_POST['position']);
+
+  // form validation: ensure that the form is correctly filled ...
+  // by adding (array_push()) corresponding error unto $errors array
+  if (empty($username)) { array_push($errors, "Username is required"); }
+  if (empty($email)) { array_push($errors, "Email is required"); }
+  if (empty($password_1)) { array_push($errors, "Password is required"); }
+  if ($password_1 != $password_2) {
+	array_push($errors, "The two passwords do not match");
+  }
+
+  // first check the database to make sure 
+  // a user does not already exist with the same username and/or email
+  $user_check_query = "SELECT * FROM register_login WHERE username='$username' OR email='$email' LIMIT 1";
+  $result = mysqli_query($db, $user_check_query);
+  $user = mysqli_fetch_assoc($result);
+  
+  if ($user) { // if user exists
+    if ($user['username'] === $username) {
+      array_push($errors, "Username already exists");
+    }
+
+    if ($user['email'] === $email) {
+      array_push($errors, "email already exists");
+    }
+  }
+
+  // Finally, register user if there are no errors in the form
+  if (count($errors) == 0) {
+  	$password = md5($password_1);//encrypt the password before saving in the database
+
+  	$query = "INSERT INTO register_login (fname,sname,lname,email,username, email, password,phone,nationality,county,position) 
+  			  VALUES('$fname','$sname','$lname','$username', '$email', '$password','$phone','$nationality','$county','$position')";
+  	mysqli_query($db, $query);
+  	$_SESSION['username'] = $username;
+  	$_SESSION['success'] = "You are now logged in";
+  	header('location:index.html');
+  }
+}
+
+?>
+
 <!DOCTYPE html>
 <title>REGISTRATION FORM</title>
-<link rel="shortcut icon" type="image/png" href="./img/ic-launcher-web.png"/>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -42,7 +107,7 @@
         <a class="nav-link" href="./tournaments.html">TOURNAMENTS</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link " href="./dashboard/v2">VIEW REPORTS</a>
+        <a class="nav-link " href="#">VIEW REPORTS</a>
       </li>
     
     <input type="button" id="btn" class="btn btn-primary " value="REGISTER / LOGIN" onclick="window.location.href='register.html'">
@@ -62,7 +127,6 @@
 
 <style>
    body{background:#8cd7f7}
-   .navbar{background-color:#121552;}
 
 .load{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);
   /*change these sizes to fit into your project*/
@@ -71,10 +135,10 @@
 }
 .load hr{border:0;margin:0;width:40%;height:40%;position:absolute;border-radius:50%;animation:spin 2s ease infinite}
 
-.load :first-child{background:#FFCB04;animation-delay:-1.5s}
-.load :nth-child(2){background:#121552;animation-delay:-1s}
-.load :nth-child(3){background:#8CD7F7;animation-delay:-0.5s}
-.load :last-child{background:#FFF}
+.load :first-child{background:#19A68C;animation-delay:-1.5s}
+.load :nth-child(2){background:#F63D3A;animation-delay:-1s}
+.load :nth-child(3){background:#FDA543;animation-delay:-0.5s}
+.load :last-child{background:#193B48}
 
 @keyframes spin{
   0%,100%{transform:translate(0)}
@@ -95,17 +159,17 @@
 <div id="login-box">
   <div class="left">
     <form method="POST" action="register.php">
+    <?php include('errors.php'); ?>
     
-    
-    <input type="text" name="username" placeholder="Username"  id="username"/>
-    <input type="text" name="email" placeholder="E-mail" id="email"/>
+    <input type="text"  value="<?php echo $username; ?>"  name="username" placeholder="Username"  id="username"/>
+    <input type="text"  value="<?php echo $email; ?>"   name="email" placeholder="E-mail" id="email"/>
     <input type="password" name="password_1" placeholder="Password"  id="password_1"/>
     <input type="password" name="password_2" placeholder="Re enter your password"  id="password_2"/>
-    <input type="text" name="fname" placeholder="Your first name"  id="fname"/>
-    <input type="text" name="sname" placeholder="Your second name"  id="sname"/>
-    <input type="text" name="lname" placeholder="Your last name"  id="lname"/>
-    <input type="number" name="phone" placeholder="Your phone number" id="phone"  /><br><br>
-     <input type="text" name="county" placeholder="Your county" id="county"/>
+    <input type="text" value="<?php echo $fname; ?>" name="fname" placeholder="Your first name"  id="fname"/>
+    <input type="text" value="<?php echo $sname; ?>" name="sname" placeholder="Your second name"  id="sname"/>
+    <input type="text"  value="<?php echo $lname; ?>"  name="lname" placeholder="Your last name"  id="lname"/>
+    <input type="number"  value="<?php echo $phone; ?>" name="phone" placeholder="Your phone number" id="phone"  /><br><br>
+    <input type="text"  value="<?php echo $county; ?>"   name="county" placeholder="Your county" id="county"/>
     
     
     
@@ -143,11 +207,10 @@
           <div class="col-xs-6 col-md-3">
             <h6>Categories</h6>
             <ul class="footer-links">
-                  <li><a href="">  under 7</a></li>
-              <li><a href="">under 9</a></li>
-              <li><a href="">under 11</a></li>
+              <li><a href="">  under 17</a></li>
               <li><a href="">under 15</a></li>
-                    <li><a href="">under 17</a></li>
+              <li><a href="">under 13</a></li>
+              <li><a href="">under 5</a></li>
             
             </ul>
           </div>
@@ -311,7 +374,7 @@ input[type="submit"]:active {
   padding: 40px;
   width: 400px;
   height: 800px;
-  background-color:#ffcb04;
+  background-color:#8cd7f7;
   background-size: cover;
   background-position: center;
   border-radius: 0 2px 2px 0;
